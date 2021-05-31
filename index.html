@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./demo_icon.png" type="image/gif" sizes="16x16">
+</head>
+<body>
+<!-- Navbar -->
+  <div class="container">
+    <div class="navbar">
+      <a href="./index.html" target="_blank"><img src="./logo.png" alt="logo" type="image" class="logo"></a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">SPECIFICATIONS</a></li>
+        <li><a href="#">PRODUCT</a></li>
+        <li><a href="#">CONNECT</a></li>
+      </ul>
+    </div>
+      <div class="content">
+        <div class="left-side">
+          <h1>THE<br>Travis<br>Scott</h1>
+        </div>
+        <div class="right-side">
+          <p>Click Here To Listen</p>
+          <img src="./play.png" alt="play_button" id="icon" type="image">
+        </div>
+      </div>
+  </div>
+
+<!-- Audio -->
+<audio id="mySong">
+  <source src="./WizKhalifa.mp3" type="audio/mp3">
+</audio>
+
+<!-- Script -->
+<script>
+  var mySong = document.getElementById("mySong");
+  var icon = document.getElementById("icon");
+  
+  icon.onclick = function(){
+    if(mySong.paused){
+      mySong.play();
+      icon.src = "./pause.png"
+    }else{
+      mySong.pause();
+      icon.src = "./play.png"
+    }
+  }
+</script>
+</body>
+</html>
